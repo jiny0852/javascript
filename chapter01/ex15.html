@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+
+<html lang="ko">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>js공부</title>
+
+
+    </head>
+
+
+    <body>
+
+
+        <h1>자바스크립트</h1>
+        <h2>객체</h2>
+
+<!-- ------------------------------------------------------------ -->
+        <script>
+
+            //객체 생성과 함꼐 초기화
+            let guestbookVo = {  
+                name: '정우성',
+                pw: '1234',
+                content: '방문합니다',
+
+                showInfo: function() {
+                    console.log( this.name + "," + this.pw + "," + this.content );
+
+                    console.log("--------------------");
+                    console.log('방문자.' + this.name);
+                    console.log('내용.' + this.content);
+
+                    console.log("--------------------");
+
+                }
+            };
+
+            //읽는다 실행한다
+            guestbookVo.showInfo(); //변수에 함수가 담겨져 있음 그래서 () 실행해야함
+            console.log(guestbookVo.showInfo);
+            /*
+            for ( let i = 0 ; i < arr03.length ; i++ ) {
+
+                if ( typeof arr03[i] === 'function') {
+                    arr03[i]();
+                } else {
+                    console.log(arr03[i]);
+                }
+
+            }
+            */
+
+            console.log(guestbookVo.name);
+            console.log(guestbookVo.pw);
+            console.log(guestbookVo.content);
+            console.log(guestbookVo['content']); //다른 표기법
+            
+            console.log(guestbookVo);
+
+
+
+
+
+
+
+        </script>
+
+<!-- ------------------------------------------------------------ -->
+    </body>
+
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+
+<html lang="ko">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>js공부</title>
+
+
+    </head>
+
+
+    <body>
+
+
+        <h1>자바스크립트</h1>
+        <h2>배열</h2>
+
+<!-- ------------------------------------------------------------ -->
+        <script>
+
+            let arr00 = new Array();
+            arr00[0] = 1;
+            arr00[1] = 2.5;
+            arr00[2] = '안녕';
+            arr00[4] = 'hello!!';
+            
+            console.log(arr00[1]);
+            console.log(arr00[3]);
+            console.log("---------------------------");
+
+
+
+
+            /////////////////////////////////////////
+
+            //오브젝트형 리스트에 가깝다 자료형 다들어감
+
+            let arr01 = [10, 20, 30, 40, 50];
+
+            console.log(arr01[0]);
+            console.log(arr01[3]);
+
+            let no = arr01[2];
+            console.log(no);
+
+            arr01[6] = 60;
+
+            console.log("---------------------------");
+
+            let arr02 = []; //배열
+            arr02[0] = 1;
+            arr02[2] = 2;
+            arr02[3] = 3;
+
+            //전체 출력하기
+            for ( let i = 0 ; i < arr02.length ; i++ ) {
+                console.log(arr02[i]);
+            }
+
+            ////////////////////////////////////////
+
+            console.log("---------------------------");
+
+            function printName() {
+                console.log('정우성');
+            }
+
+            let aaa = function () {console.log('배아파')};
+
+
+            let arr03 = []; 
+            arr03[0] = 1;
+            arr03[1] = 2.5;
+            arr03[2] = '안녕';
+            arr03[4] = 'hello!!';
+            arr03[5] = 5>3;
+            arr03[6] = printName;
+            arr03[7] = function (){console.log('황일영')}; //익명함수 자료형은 'function'
+            arr03[8] = aaa;
+
+            for ( let i = 0 ; i < arr03.length ; i++ ) {
+                console.log(arr03[i]);
+            }
+            
+            arr03[6]();
+            arr03[7]();
+            arr03[8]();
+
+            //*변수에는 메소드를 넣을수 있다
+            //*변수의 값을 읽는다
+            //*메소드를 읽는다 와 메소드를 실행한다를 구분해라
+            for ( let i = 0 ; i < arr03.length ; i++ ) {
+
+                if ( typeof arr03[i] === 'function') {
+                    arr03[i]();
+                } else {
+                    console.log(arr03[i]);
+                }
+                
+            }
+
+
+            console.log("---------------------------");
+
+            let arr05 = [1, 2.5, '안녕', ['정우성', '박명수', '유재석'] ];
+
+            console.log(arr05[1]);
+
+            console.log(arr05[3]);
+
+            console.log(arr05[3][0]);
+
+
+            console.log("---------------------------");
+
+            let arr06 = ['이효리'];
+            //arr06[1] = '정우성';
+            arr06.push('정우성'); //java.add 랑 비슷
+            arr06.push('박명수');
+            arr06.push('유재석');
+
+            for ( let i = 0 ; i < arr06.length ; i++ ) {
+                console.log(arr06[i]);
+            }
+
+            arr06.pop();
+            console.log(arr06);
+
+            for ( let i = 0 ; i < arr06.length ; i++ ) {
+                console.log(arr06[i]);
+            }
+
+
+
+
+
+
+
+        </script>
+
+<!-- ------------------------------------------------------------ -->
+    </body>
+
+
+</html>

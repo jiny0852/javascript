@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+
+<html lang="ko">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>js공부</title>
+
+
+    </head>
+
+
+    <body>
+
+
+        <h1>자바스크립트</h1>
+        <h2>변수의 범위</h2>
+
+<!-- ------------------------------------------------------------ -->
+        <script>
+            /*
+            let str = 'global';
+
+            //함수 정의
+            function checkScope() {
+                let str = 'local';
+                console.log(str);
+            }
+
+            //함수 실행
+            //checkScope; //실행은 안함 인식은 함 
+            // 출력해봐 (출력)  //////////  실행해봐(프로그램이 작동)
+            checkScope();
+
+            console.log(checkScope());
+
+            console.log(str);
+            */
+
+            /////////////////////////////////////////////////
+
+            let str = 'global';
+            //let str2 = '로컬'; //2
+
+            function checkScope() {
+                str = 'local';
+                let str2 = '로컬';
+                console.log(str);
+            }
+
+            console.log(str); //global
+
+            //console.log(str2); //오류, 선언이 안되서 되게하려면 2 실행
+
+            checkScope(); //local
+
+            console.log(str); //local
+
+            console.log(str2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+<!-- ------------------------------------------------------------ -->
+    </body>
+
+
+</html>

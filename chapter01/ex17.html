@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+
+<html lang="ko">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>js공부</title>
+
+
+    </head>
+
+
+    <body>
+
+
+        <h1>자바스크립트</h1>
+        <h2>리스트 - 객체 데이터</h2>
+
+<!-- ------------------------------------------------------------ -->
+        <script>
+
+            let diagramList = [];
+
+            let diagramVo1 = {
+                name: '삼각형',
+                width: 5,
+                height: 10,
+
+                area: function() { console.log( this.name + '의 넓이는 = ' 
+                                + (this.width * this.height / 2) ) }
+            };
+            let diagramVo2 = {
+                name: '사각형',
+                width: 5,
+                height: 5,
+
+                area: function() { console.log( this.name + '의 넓이는 = ' 
+                                + (this.width * this.height) ) }
+            };
+            let diagramVo3 = {
+                name: '원',
+                radius: 5,
+
+                area: function() { console.log( this.name + '의 넓이는 = ' 
+                                + (this.radius * this.radius * 3.14) ) }
+            };
+
+            diagramList.push(diagramVo1);
+            diagramList.push(diagramVo2);
+            diagramList.push(diagramVo3);
+
+            for ( let i = 0 ; i < diagramList.length ; i++ ) {
+
+                diagramList[i].area();
+
+                //console.log( diagramList[i].name + '의 넓이는 = ' + diagramList[i].area() ) ;
+                
+
+            }
+
+            /*
+             for ( let i = 0 ; i < diagramList.length ; i++ ) {
+
+                if ( typeof arr03[i] === 'function') {
+                    diagramList[i]();
+                } else {
+                    console.log(diagramList[i]);
+                }
+                
+            }
+            */
+
+
+
+
+
+
+        </script>
+
+<!-- ------------------------------------------------------------ -->
+    </body>
+
+
+</html>
