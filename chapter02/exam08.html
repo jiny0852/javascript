@@ -50,9 +50,73 @@
 		</tbody>
 	</table>
 
+
+	<script>
+
+		document.addEventListener('DOMContentLoaded', function () {
+
+			console.log('되냐');
+			
+			let tableVo = document.querySelector('#n-1');
+			console.log(tableVo);
+
+			let personList = [];
+
+			console.log(tableVo.children[2].textContent);
+			console.log(tableVo.firstElementChild.textContent);
+			//console.log(tableVo.children.textContent);
+			
+
+            let personVo1 = {
+                name: tableVo.children[0].textContent,
+                hp: tableVo.children[1].textContent,
+                company: tableVo.children[2].textContent  
+
+            };
+			let personVo2 = {
+                name: tableVo.nextElementSibling.children[0].textContent,
+                hp: tableVo.nextElementSibling.children[1].textContent,
+                company: tableVo.nextElementSibling.children[2].textContent  
+
+            };
+			let personVo3 = {
+                name: tableVo.nextElementSibling.nextElementSibling.children[0].textContent,
+                hp: tableVo.nextElementSibling.nextElementSibling.children[1].textContent,
+                company: tableVo.parentElement.lastElementChild.children[2].textContent  
+
+            };
+
+			personList.push(personVo1);
+            personList.push(personVo2);
+            personList.push(personVo3);
+			
+            for ( let i = 0 ; i < personList.length ; i++ ) {
+
+				console.log(personList[i]);
+
+            }
+
+
+
+
+
+
+
+
+
+
+		});
+
+
+
+
+
+	</script>
+
+
+
 </body>
 
-<script>
-</script>
+
 
 </html>

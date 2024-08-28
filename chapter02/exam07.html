@@ -50,9 +50,77 @@
 		</tbody>
 	</table>
 
+	<script>
+
+		document.addEventListener('DOMContentLoaded', function () {
+
+			console.log('완료');
+
+			let tag01 = document.querySelector('h1');
+
+			console.log(tag01);
+			console.log(tag01.parentElement);
+
+			console.log('------------------------------------');
+
+
+			//클래스 명이 red
+			let tag02 = document.querySelector('.red');
+
+			console.log(tag02);
+			console.log(tag02.parentElement);
+
+
+			//id 가  n-3의 부모
+			let tag03 = document.querySelector('#n-3');
+
+			console.log(tag03);
+			console.log(tag03.parentElement);
+
+			console.log('------------------------------------');
+
+
+			//tr 이효리 전화번호  td
+			let tag04 = document.querySelector('#h-2');
+
+			console.log(tag04);
+			//#h-2 위치 일때 본인의 tr 의 id 값 출력
+			console.log(tag04.id);
+			//#h-2 위치 일때 이효리 이름 출력
+			console.log(tag04.previousElementSibling.innerHTML);
+			//#h-2 위치 일때 이효리 회사 출력
+			console.log(tag04.nextElementSibling.textContent);
+
+
+			//정우성 회사번호
+			console.log(tag04.parentElement.previousElementSibling.lastElementChild.textContent)
+			//박명수 이름
+			console.log(tag04.parentElement.nextElementSibling.firstElementChild.textContent);
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		});
+
+
+	</script>
+
+
 </body>
 
-<script>
-</script>
+
 
 </html>

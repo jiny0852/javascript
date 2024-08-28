@@ -18,11 +18,51 @@
 		<li id="first"> 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 </li>
 	</ul>
 
+	<!-- -------------------------------------------------------------- -->
+	<script>
+
+		document.addEventListener('DOMContentLoaded', function () { 
+		//                        이시점(돔생성시)에   이거(동작)해줘
+			console.log('DOM tree완료');
+
+			//id=second
+			let seTag = document.getElementById('second');
+			console.dir(seTag);
+			seTag.style.color = '#ff0000';
+
+			//id=third
+			let thTag = document.getElementById('third');
+			console.dir(thTag);
+			thTag.style.color = '#0000ff';
+
+			//id=fourth
+			let foTag = document.getElementById('fourth');
+			console.dir(foTag);
+			foTag.style.color = '#00ff00';
+
+			//id=first 동일한 아이디가 2개 맨위에 1개만 적용됨
+			let fiTag = document.getElementById('first');
+			console.dir(fiTag);
+			fiTag.style.color = '#ff00ff';
+
+
+		});
+
+		window.addEventListener('load', function () {
+			console.log('페인팅까지 완료');
+		});
+
+
+
+		Math.plus( '5', 3 );
+
+
+
+
+	</script>
+	<!-- -------------------------------------------------------------- -->
 
 </body>
 
-<script>
-
-</script>
 
 </html>
