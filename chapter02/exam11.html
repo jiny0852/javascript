@@ -62,9 +62,55 @@
 
 
 
+	<script>
+
+		document.addEventListener('DOMContentLoaded', function() {
+
+			console.log('아 드개좌~');
+
+			//#p11 태그의 컨텐츠를 가져오세요
+			//<p id="p11">자바<strong>스크립트</strong></p>
+			let p11Tag = document.querySelector('#p11');
+
+			console.log(p11Tag);
+			console.log(p11Tag.innerHTML);
+			console.log(p11Tag.textContent);
+
+			//#p13캐그의 텍스트를 --> 가나다라뷁
+			let p13Tag = document.querySelector('#p13');
+
+			console.log(p13Tag);
+
+			p13Tag.innerHTML = '<strong>가나다라마바사아자차카타파하</strong>'
+			console.log(p13Tag);
+
+			let p14Tag = document.querySelector('#p14');
+
+			console.log(p14Tag);
+
+			p14Tag.textContent = '<strong>가나다라마바사아자차카타파하</strong>'
+			console.log(p14Tag);
+
+
+			let p1Tag = document.querySelector('#p1');
+
+			console.log(p1Tag);
+			p1Tag.textContent = '';
+
+
+
+
+
+
+
+
+		});
+
+	</script>
+
+
 </body>
 
-<script>
-</script>
+
 
 </html>

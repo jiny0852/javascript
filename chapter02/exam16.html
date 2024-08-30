@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+
+
+</style>
+
+
+</head>
+
+<body>
+
+	<ul>
+        <!-- afterbegin -->
+		<li>첫번째아이템입니다.</li>
+		<li>두번째아이템입니다.</li>
+		<li>세번째아이템입니다.</li>
+        <li>푸춰이(가) 행복해합니다.</li>
+        <li>푸춰이(가) 행복해합니다.</li>
+        <li>푸춰이(가) 조르기을(를) 시전했다.</li>
+        <li>푸춰dl(가) 도망쳤다!!!!!</li>
+		<li>네번째아이템입니다.</li>
+		<li>다섯번째아이템입니다.</li>
+		<li>여섯번째아이템입니다.</li>
+        <!-- beforeend -->
+	</ul>
+
+    <p>안녕하세요</p>
+
+
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            console.log('얍');
+
+
+
+            /*
+            let pTag = document.querySelector('p');
+            console.log(pTag);
+            
+            pTag.addEventListener('dblclick', function () {
+                console.log('p요소 이벤트 실행');
+            });
+            */
+            
+            let liTags = document.querySelectorAll('li');
+            console.log(liTags);
+            /*
+            liTags[0].addEventListener('click', function() {
+                console.log('0클릭');
+            });
+            liTags[1].addEventListener('click', function() {
+                console.log('1클릭');
+            });
+            */
+            for ( let i = 0 ; i < liTags.length ; i ++ ) {
+                liTags[i].addEventListener('click', function () {
+                    console.log('0삭제');
+                    console.log(this);
+                    //console.log(this.style.color='#ff0000');
+                    console.log(event.target);
+
+                    //this.remove();
+                    //this.textContent = '';
+                    event.target.remove();
+                    event.target.textContent = '';
+
+
+
+                });
+
+
+            }
+
+
+
+        });
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>

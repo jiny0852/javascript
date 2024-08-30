@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+    ul{
+        width: 200px;
+        padding: 20px;
+        background-color: #00ffff;
+    }
+
+    ul>li {
+        border: 1px solid #000000;
+    }
+
+</style>
+
+
+</head>
+
+<body>
+
+	<ul>
+        <!-- afterbegin -->
+		<li>첫번째아이템입니다.</li>
+		<li>두번째아이템입니다.</li>
+		<li>세번째아이템입니다.</li>
+        <li>푸춰이(가) 행복해합니다.</li>
+        <li>푸춰이(가) 행복해합니다.</li>
+        <li>푸춰이(가) 조르기을(를) 시전했다.</li>
+        <li>푸춰dl(가) 도망쳤다!!!!!</li>
+		<li>네번째아이템입니다.</li>
+		<li>다섯번째아이템입니다.</li>
+		<li>여섯번째아이템입니다.</li>
+        <!-- beforeend -->
+	</ul>
+
+    <button id="btn" type="button">뒤에추가</button>
+
+
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            console.log('얍');
+
+
+            let btnTag = document.querySelector('#btn');
+            console.log(btnTag);
+
+            
+            //뒤에추가 버튼클릭했을때
+            btnTag.addEventListener('click', function () {
+
+                console.log('딸깍');
+
+                let ulTag = document.querySelector('ul');
+                console.log(ulTag);
+
+                ulTag.insertAdjacentHTML('beforeend', '<li>푸춰이(가) <strong>조르기</strong>을(를) 시전했다.</li>');
+
+            });
+
+
+            //ul에 클릭 할때
+            let ulTag = document.querySelector('ul');
+            ulTag.addEventListener('click', function () {
+
+                console.log('ul요소 클릭');
+                //console.log(this); //이벤트 가지고 있는애
+                //console.log(event.target); //실제로 클릭 당한 애
+                console.log(event.target.tagName); //실제로 클릭 당한 애
+
+                if( event.target.tagName == 'LI' ) { //실제로 클릭한 캐그네임이 LI이면 삭제
+                    event.target.textContent= '';
+                }
+
+
+
+                //event.target.remove();
+
+            });
+
+
+
+
+
+            /* //앙대요ㅕ 하지 마쎼용
+            //li 요소를 클릭했을때 --삭제
+            let liTags = document.querySelectorAll('li');
+            console.log(liTags);
+
+            for ( let i = 0 ; i < liTags.length ; i++ ){
+
+                liTags[i].addEventListener('click', function () {
+
+                        console.log('li요소 클릭');
+
+                });
+
+            }
+            */
+            
+  
+
+
+
+        });
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>

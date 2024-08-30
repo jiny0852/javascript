@@ -56,47 +56,131 @@
 		document.addEventListener('DOMContentLoaded', function () {
 
 			console.log('되냐');
+
+			let tableList = document.querySelectorAll('tbody');
+			console.log(tableList[0]);
+			console.log(tableList[1]);
+
+
+
+
+
 			
 			let tableVo = document.querySelector('#n-1');
 			console.log(tableVo);
 
-			let personList = [];
+			let ppersonList = [];
 
 			console.log(tableVo.children[2].textContent);
 			console.log(tableVo.firstElementChild.textContent);
 			//console.log(tableVo.children.textContent);
 			
 
-            let personVo1 = {
+            let ppersonVo1 = {
                 name: tableVo.children[0].textContent,
                 hp: tableVo.children[1].textContent,
                 company: tableVo.children[2].textContent  
 
             };
-			let personVo2 = {
+			let ppersonVo2 = {
                 name: tableVo.nextElementSibling.children[0].textContent,
                 hp: tableVo.nextElementSibling.children[1].textContent,
                 company: tableVo.nextElementSibling.children[2].textContent  
 
             };
-			let personVo3 = {
+			let ppersonVo3 = {
                 name: tableVo.nextElementSibling.nextElementSibling.children[0].textContent,
                 hp: tableVo.nextElementSibling.nextElementSibling.children[1].textContent,
                 company: tableVo.parentElement.lastElementChild.children[2].textContent  
 
             };
 
-			personList.push(personVo1);
-            personList.push(personVo2);
-            personList.push(personVo3);
+			ppersonList.push(ppersonVo1);
+            ppersonList.push(ppersonVo2);
+            ppersonList.push(ppersonVo3);
 
-			console.log(personList);
+			console.log(ppersonList);
 			
-            for ( let i = 0 ; i < personList.length ; i++ ) {
+            for ( let i = 0 ; i < ppersonList.length ; i++ ) {
 
-				console.log(personList[i]);
+				console.log(ppersonList[i].hp);
 
             }
+
+
+
+
+
+			console.log('#########################################');
+			////////////////////////////////////////////////////
+
+
+			let trTags = document.querySelectorAll('tbody>tr');
+
+			let personList = [];
+
+			console.log(trTags[0].children[0].textContent);
+
+			trTags[0].children;
+
+			let personVo1 = {
+
+				name: trTags[0].children[0].textContent,
+				hp: trTags[0].children[1].textContent,
+				company: trTags[0].children[2].textContent
+
+			};
+
+			let personVo2 = {
+
+				name: trTags[1].children[0].textContent,
+				hp: trTags[1].children[1].textContent,
+				company: trTags[1].children[2].textContent
+
+			};
+
+			let personVo3 = {
+
+				name: trTags[2].children[0].textContent,
+				hp: trTags[2].children[1].textContent,
+				company: trTags[2].children[2].textContent
+
+			};
+
+			console.log(personVo1);
+			console.log(personVo1.name);
+
+			personList.push(personVo1);
+			personList.push(personVo2);
+			personList.push(personVo3);
+
+
+			console.log('#########################################');
+
+			for ( let i = 0 ; i < personList.length ; i++ ) {
+
+
+				console.log(personList[i].name);
+
+
+			}
+
+
+
+/*
+			
+    let list = [];
+    document.querySelectorAll('tbody>tr').forEach(tag => {
+        list.push({
+            name: tag.children[0].textContent,
+            hp: tag.children[1].textContent,
+            company: tag.children[2].textContent
+        });
+    });
+    console.log(list);
+*/
+
+
 
 
 

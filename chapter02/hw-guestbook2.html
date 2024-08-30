@@ -28,19 +28,85 @@
 	</div>
 	<br>
 
+
+
+	<script>
+
+		document.addEventListener('DOMContentLoaded', function() {
+
+			console.log('야');
+
+			let btnTag = document.querySelector('#btnWrite');
+
+			console.log(btnTag);
+
+			btnTag.addEventListener('click', function () {
+
+				console.log('버튼 클릭');
+
+				let nameTag = document.querySelector('input[name="name"]');
+				let pwTag = document.querySelector('input[name="pw"]');
+				let contentTag = document.querySelector('textarea[name="content"]');
+
+
+				//guestbookVo 콘솔에 띄우기
+				let guestbookVo = {
+
+					name: nameTag.value,
+					password: pwTag.value,
+					content: contentTag.value
+
+				};
+
+				console.log(guestbookVo);
+
+
+				//비우기
+				nameTag.value = '';
+				pwTag.value = '';
+				contentTag.value = '';
+
+
+
+
+
+
+/*
+				let tdTags = document.querySelectorAll('tr>td');
+
+				console.log(tdTags);
+
+				for (let i = 0 ; i < tdTags.length ; i++) {
+					console.log(tdTags[i]);
+				}
+
+				let name = document.querySelector('input[name="name"]');
+				console.log(name.value);
+
+								let content = document.querySelector('textarea[name="content"]');
+				console.log(content);
+
+				*/
+
+
+
+
+			});
+
+
+
+
+
+
+
+
+
+		});
+
+	</script>
+
 </body>
 
-<script>
 
-
-
-
-
-
-
-
-
-
-</script>
 
 </html>

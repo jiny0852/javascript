@@ -42,18 +42,57 @@
 
 <body>
 	<div class="box-red bold 50px">
-		학교종이 땡땡땡<br>
+		학원종이 삐로롱<br>
 		어서모이자<br>
-		선생님이 우리를<br>
+		강사님이 우리를<br>
 		기다리신다<br>
+		푸춰푸춰<br>
 	<div>
+
+
+
+
+	<script>
+
+		document.addEventListener('DOMContentLoaded', function () {
+
+			console.log('드개좌');
+
+			let divTag = document.querySelector('div');
+			console.log(divTag);
+			console.log(divTag.className);
+			console.log(divTag.classList[0]);
+
+			/*
+			divTag.classList.remove('size50');
+			divTag.classList.remove('bold');
+			divTag.classList.remove('box-red');
+
+			//divTag.classList.add('box-blue', 'italic');
+			
+			divTag.classList.remove('box-red', 'bold', 'size50');
+*/
+			//box-blue			
+			divTag.classList.remove('box-red');
+			divTag.classList.add('box-blue');
+
+			divTag.classList.replace('size50', 'size20');
+
+
+
+
+
+
+
+
+
+		});
+	
+	</script>
 	
 
 </body>
 
-<script>
 
-	
-</script>
 
 </html>

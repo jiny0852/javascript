@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+    p{
+        width: 400px;
+        border : 1px solid #000000;
+        background-color: #ff00ff;
+    }
+
+    div{
+        width: 800px;
+        border: 1px solid #ff00ff;
+    }
+
+</style>
+
+
+</head>
+
+<body>
+
+    <div>
+        <p id="p1">마바사아자차카타파하</p>
+    </div>
+    
+
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            console.log('얍');
+
+            let pTag = document.querySelector('#p1');
+
+            console.log(pTag);
+
+            //pTag.innerHTML= '가나다라';
+            pTag.insertAdjacentHTML('afterbegin', '가나다라');
+            pTag.insertAdjacentHTML('beforeend', 'abcdef');
+            pTag.insertAdjacentHTML('beforebegin', '시작전');
+            pTag.insertAdjacentHTML('afterend', '끝난후');
+
+
+
+
+
+
+
+        });
+
+    </script>
+
+
+
+</body>
+
+
+
+</html>
